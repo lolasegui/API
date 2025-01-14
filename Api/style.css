@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    background-color: rgb(55, 116, 231);
+    font-family:cursive;
+    display: grid;
+    justify-content: center;
+}
+head{
+    justify-content: center;
+    font-family:cursive;
+}
+.pokeball{
+    width: 10px;
+    justify-content: center;
+    
+}
+
+button{
+    font-family:cursive;
+    justify-content: center;
+}
