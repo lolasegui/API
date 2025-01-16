@@ -5,20 +5,43 @@
     <link rel="stylesheet" href="/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon</title>
-    <img style="width: 600px;" src="./img/pokemon-logo-pokemon-icon-transparent-free-png.webp" alt="">
-    <img style="width: 220px;" src="./img/Pokebola-pokeball-png-0.png" alt="">
+    <img style="width: 300px;" src="./img/ASH.png" alt="">
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Gasoek+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-   
-    <input type="text" name="" id="nom1">
-    <button id="button">1 Pokemon</button>
+    <h1>ELIGE TU POKEMON </h1>
+    <input style="height: 30px; border-radius: 20px;" type="text" name="" id="nom1">
+    <br>
+    <button id="button">UN POKEMON</button>
 
-    <button id="tots">Tots</button>
+    <button id="tots">TODOS</button>
+    
+    <button id="tipo">BUSCAR TIPO</button>
 
-    <button id="electric">Tipo Electric</button>
+    <label for="gibet"> Elige tipo</label>
+    
+    <select name="gibet" id="gibet">
 
-    <div id="resultat"></div>
+    <option value="electric">Electric</option>
+    <option value="fire">Fuego</option>
+    <option value="water">Agua</option>
+    <option value="grass">Hierba</option>
+    
+    
+    </select>
+    
+
+
+     
+    <div id="resultat" class="pokemon-container"></div>
+
+
 </body>
+
 <script type="module" src="./script.js"></script>
 </html>
