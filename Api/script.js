@@ -126,4 +126,41 @@ function pintarPokemon2 (pokemon) {
     document.getElementById("resultat").append(imatge)
 }
 
+document.getElementById("pes").addEventListener("click", function () {
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange', function () {
+        if (this.readyState === this.DONE) {
+            const response = JSON.parse(this.responseText);
+            console.log(response);
+            document.getElementById("resultat").innerHTML = "";
+            for (let i = 0; i < response.results.length; i++) {
+            let tipo = document.getElementById("pesito").value
+                const xhr1 = new XMLHttpRequest();
+
+                xhr1.addEventListener('readystatechange', function () {
+                    if (this.readyState === this.DONE) {
+                        const response = JSON.parse(this.responseText);
+                        console.log(response)
+                        if(response.weight > pes){
+                            pintarPokemon2(response);
+                        }
+                        
+                    }
+                });
+
+                xhr1.open('GET', response.results[i].url);
+                xhr1.send();
+
+            }
+        }
+    });
+    
+    xhr.open('GET', `https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`);
+    xhr.send();
+});
+
+
+
+
 
