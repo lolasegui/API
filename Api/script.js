@@ -88,7 +88,7 @@ document.getElementById("tipo").addEventListener("click", function () {
             console.log(response);
             document.getElementById("resultat").innerHTML = "";
             for (let i = 0; i < response.results.length; i++) {
-            let tipo = document.getElementById("gibet").value
+            let tipo = document.getElementById("lola").value
                 const xhr1 = new XMLHttpRequest();
 
                 xhr1.addEventListener('readystatechange', function () {
@@ -132,17 +132,18 @@ document.getElementById("pes").addEventListener("click", function () {
     xhr.addEventListener('readystatechange', function () {
         if (this.readyState === this.DONE) {
             const response = JSON.parse(this.responseText);
-            console.log(response);
+ 
             document.getElementById("resultat").innerHTML = "";
             for (let i = 0; i < response.results.length; i++) {
-            let tipo = document.getElementById("pesito").value
+            let pes = document.getElementById("pesito").value
                 const xhr1 = new XMLHttpRequest();
 
                 xhr1.addEventListener('readystatechange', function () {
                     if (this.readyState === this.DONE) {
                         const response = JSON.parse(this.responseText);
-                        console.log(response)
-                        if(response.weight > pes){
+                        
+                        if(response.weight >= pes){
+                            console.log(response)
                             pintarPokemon2(response);
                         }
                         
